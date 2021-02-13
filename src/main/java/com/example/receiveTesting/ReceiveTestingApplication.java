@@ -12,17 +12,17 @@ import org.springframework.jms.core.JmsTemplate;
 @SpringBootApplication
 public class ReceiveTestingApplication {
 
-	public static void main(String[] args) throws JMSException {
+	public static void main(String[] args) {
 		ApplicationContext ctx = SpringApplication.run(ReceiveTestingApplication.class, args);
 		
 		JmsTemplate jms = ctx.getBean(JmsTemplate.class);
 		//time taken to receive a message
 		System.out.println("\nTime taken to receive the messsage: "+jms.getReceiveTimeout());
 		
-		Message msg = jms.receive("MyQueue");
-		TextMessage txt = (TextMessage) msg;
+		String msg = jms.receiveAndConvert("MyQueue").toString();
 		
-		System.out.println("\nReceiving message from message broker: " + txt.getText());
+		
+		System.out.println("\nReceiving message from message broker: " + msg);
 	}
 
 }
