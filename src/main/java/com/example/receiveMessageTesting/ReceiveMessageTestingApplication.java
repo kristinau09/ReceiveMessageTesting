@@ -1,13 +1,13 @@
-package com.example.receiveTesting;
+package com.example.receiveMessageTesting;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ReceiveTestingApplication {
+public class ReceiveMessageTestingApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ReceiveTestingApplication.class, args);
+		SpringApplication.run(ReceiveMessageTestingApplication.class, args);
 		
 		
 	}

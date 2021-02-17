@@ -1,4 +1,4 @@
-package com.example.receiveTesting;
+package com.example.receiveMessageTesting;
 
 import org.springframework.jms.annotation.JmsListener;
 import org.springframework.stereotype.Component;
