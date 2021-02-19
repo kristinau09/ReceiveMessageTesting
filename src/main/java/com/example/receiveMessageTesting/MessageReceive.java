@@ -10,7 +10,7 @@ public class MessageReceive {
 	public void processMessage(String message) {
 		
 		System.out.println("Attempting to process a message...............");
-			
+				
 		//End result
 		System.out.println("Message: " + message);
 		
